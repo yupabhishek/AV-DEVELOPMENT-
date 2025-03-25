@@ -5,7 +5,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
   const responsive = {
@@ -30,35 +29,34 @@ export const Skills = () => {
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>We specialize in crafting dynamic, secure, and scalable web solutions using the MERN stack—MongoDB, Express.js, React, and Node.js. Our expert team ensures innovative design, robust development, and seamless functionality to bring your vision to life.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                        </Carousel>
-                    </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
+              <h2>Skills</h2>
+              <p>We specialize in crafting dynamic, secure, and scalable web solutions using the MERN stack—MongoDB, Express.js, React, and Node.js. Our expert team ensures innovative design, robust development, and seamless functionality to bring your vision to life.</p>
+              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                <div className="item">
+                  <img src={meter1} alt="Image" />
+                  <h5>Web Development</h5>
                 </div>
+                <div className="item">
+                  <img src={meter2} alt="Image" />
+                  <h5>Brand Identity</h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="Image" />
+                  <h5>Logo Design</h5>
+                </div>
+                <div className="item">
+                  <img src={meter1} alt="Image" />
+                  <h5>Web Development</h5>
+                </div>
+              </Carousel>
             </div>
+          </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+      </div>
     </section>
-  )
-}
+  );
+};
