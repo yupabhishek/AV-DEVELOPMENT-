@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import animationData from "../assets/con.json";
+import animationData from "../assets/_con.json";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import Lottie from "lottie-react";
 import "animate.css";
