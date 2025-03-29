@@ -151,7 +151,7 @@ export const Plans = () => {
                           </li>
                         ))}
                       </ul>
-                      <Button variant="primary" className="plans-button">
+                      <Button  className="plans-button">
                         {plan.buttonText}
                       </Button>
                     </Card.Body>

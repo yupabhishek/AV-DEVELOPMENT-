@@ -33,6 +33,8 @@ export const NavBar = () => {
 
   return (
     <Router>
+      <div className="navback">
+
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/" className="h-100 text-white fw-bold">
@@ -48,43 +50,33 @@ export const NavBar = () => {
                 href="#skills"
                 className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
                 onClick={() => onUpdateActiveLink('skills')}
-              >
+                >
                 Skills
               </Nav.Link>
               <Nav.Link
                 href="#facilities"
                 className={activeLink === 'facilities' ? 'active navbar-link' : 'navbar-link'}
                 onClick={() => onUpdateActiveLink('facilities')}
-              >
+                >
                 Facilities
               </Nav.Link>
               <Nav.Link
                 href="#plans"
                 className={activeLink === 'plans' ? 'active navbar-link' : 'navbar-link'}
                 onClick={() => onUpdateActiveLink('plans')}
-              >
+                >
                 Plans & Pricing
               </Nav.Link>
               <Nav.Link
                 href="#projects"
                 className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
                 onClick={() => onUpdateActiveLink('projects')}
-              >
+                >
                 Projects
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
-              <div className="social-icon">
-                <a href="https://www.linkedin.com/in/ankit-singh-80aa93318/" target="_blank" rel="noopener noreferrer">
-                  <img src={navIcon1} alt="LinkedIn" />
-                </a>
-                <a href="https://www.facebook.com/yup.abhishek" target="_blank" rel="noopener noreferrer">
-                  <img src={navIcon2} alt="Facebook" />
-                </a>
-                <a href="https://www.instagram.com/viranshusingh055/" target="_blank" rel="noopener noreferrer">
-                  <img src={navIcon3} alt="Instagram" />
-                </a>
-              </div>
+              
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
               </HashLink>
@@ -92,6 +84,7 @@ export const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+                </div>
     </Router>
   );
 };

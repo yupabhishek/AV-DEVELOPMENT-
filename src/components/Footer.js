@@ -1,29 +1,104 @@
+// Footer.jsx
 import { Container, Row, Col } from "react-bootstrap";
-import { MailchimpForm } from "./MailchimpForm";
-import logo from "../assets/img/logo.png";
+// import logo from "../assets/img/logo.png"/;
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <div className="footerBackground">
+
+    <div className="footerCss">
+
+    <footer className="footer   py-5">
       <Container>
-        <Row className="align-items-center">
-          <MailchimpForm />
-          <Col size={12} sm={6}>
-            <img src={logo} alt="Logo" />
+        <div className="avdevelopment">
+        <h1>AV DEVELOPMENT</h1>
+
+        </div>
+        <div className="rowDiv">
+
+       
+        <Row className="gy-4 ">
+          {/* Logo Section */}
+          {/* <Col xs={12} md={3} className="text-center">
+            {/* <img src={logo} alt="Logo" className="footer-logo mb-3" /> */}
+           {/* </Col> */} 
+
+          {/* Company Links */}
+          <Col xs={6} md={3}>
+            <h5 className="fw-bold mb-3">COMPANY</h5>
+            <ul className="list-unstyled colorOfUi">
+              {["About Us", "Our Work", "Resources", "Careers", "Blogs", "Contact Us", "Industry"].map((item) => (
+                <li key={item} className="mb-2">{item}</li>
+              ))}
+            </ul>
           </Col>
-          <Col size={12} sm={6} className="text-center text-sm-end">
-            <div className="social-icon">
-                <a href="https://www.linkedin.com/in/ankit-singh-80aa93318/" target="_blank"><img src={navIcon1} alt="" /></a>
-                <a href="https://www.facebook.com/yup.abhishek" target="_blank"><img src={navIcon2} alt="" /></a>
-                <a href="https://www.instagram.com/viranshusingh055/" target="_blank"><img src={navIcon3} alt="" /></a>
-            </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+
+          {/* Services Links */}
+          <Col xs={6} md={3}>
+            <h5 className="fw-bold mb-3">SERVICES</h5>
+            <ul className="list-unstyled colorOfUi">
+              {["SEO Services", "Web Design", "Web Development", "E-Commerce Marketing", "Pay Per Click Management"].map((item) => (
+                <li key={item} className="mb-2">{item}</li>
+              ))}
+            </ul>
+          </Col>
+
+          {/* Location */}
+          <Col xs={12} md={3}>
+            <h5 className="fw-bold mb-3 ">OUR LOCATION</h5>
+            <p className="mb-2 ">
+              Burari Delhi<br />
+               INDIA <br />
+               Contact Info - 9718659236 || 8750443995  
+            </p>
+            <p className="mb-0">📧 av.development.contact@gmail.com</p>
           </Col>
         </Row>
+
+        {/* Bottom Section */}
+       
+        </div>
       </Container>
     </footer>
-  )
-}
+    </div>
+
+    <div className="socialFooter">
+    <Row className="footer-bottom align-items-center py-3">
+  {/* Copyright Section */}
+  <Col xs={12} md={6} className="text-center text-md-start">
+    <p className="mb-0">© 2024-2025 <strong>AV DEVELOPMENT</strong>. All Rights Reserved.</p>
+  </Col>
+  {/* Social Media Links */}
+ 
+  <Col xs={12} md={6} className="text-center text-md-end mt-3 mt-md-0">
+    <div className="social-icons">
+      <a href="#" className="mx-2">
+  
+        <img src={navIcon1} alt="LinkedIn" className="social-icon" />
+      </a>
+      <a href="#" className="mx-2">
+        <img src={navIcon2} alt="Facebook" className="social-icon" />
+      </a>
+      <a href="#" className="mx-2">
+        <img src={navIcon3} alt="Instagram" className="social-icon" />
+      </a>
+    </div>
+  </Col>
+</Row>
+</div>
+
+    </div>
+
+
+  );
+};
+
+// styles.css
+const styles = `
+
+`;
+
+export default styles;

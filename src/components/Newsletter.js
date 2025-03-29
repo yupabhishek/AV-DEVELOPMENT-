@@ -37,27 +37,44 @@ export const Newsletter = () => {
 
   return (
     <Col lg={12} className="d-none d-md-block">
-      <div className="newsletter-bx wow slideInUp">
-        <Row>
+      <div className="newsletter-bx">
+        <Row className="align-items-center">
           <Col lg={12} md={6} xl={5}>
-            <h3>Subscribe to our Newsletter<br /> & Never miss latest updates</h3>
-            {status === 'sending' && <Alert>Sending...</Alert>}
-            {status === 'error' && <Alert variant="danger">{message}</Alert>}
-            {status === 'success' && <Alert variant="success">{message}</Alert>}
+            <h3 className="newsletter-title">
+              Subscribe to Our Newsletter
+              <br />
+              <span className="subtitle">Stay Updated with the Latest News</span>
+            </h3>
           </Col>
           <Col md={6} xl={7}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="newsletter-form">
               <div className="new-email-bx">
-                <input 
-                  value={email} 
-                  type="email" 
-                  onChange={(e) => setEmail(e.target.value)} 
-                  placeholder="Email Address" 
-                  required 
+                <input
+                  value={email}
+                  type="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  required
+                  className="email-input"
                 />
-                <button type="submit">Submit</button>
+                <button type="submit" className="submit-btn">
+                  Subscribe
+                </button>
               </div>
             </form>
+            {status === 'sending' && (
+              <Alert className="mt-3 newsletter-alert">Sending...</Alert>
+            )}
+            {status === 'error' && (
+              <Alert variant="danger" className="mt-3 newsletter-alert">
+                {message}
+              </Alert>
+            )}
+            {status === 'success' && (
+              <Alert variant="success" className="mt-3 newsletter-alert">
+                {message}
+              </Alert>
+            )}
           </Col>
         </Row>
       </div>
