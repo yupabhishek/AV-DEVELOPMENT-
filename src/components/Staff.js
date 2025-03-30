@@ -21,7 +21,7 @@ export const Staff = () => {
       }
     },
     {
-      name: "Jane Smith",
+      name: "Viranshu Singh",
       position: "Founder & CTO",
       description: "Web developer & MERN STACK developer || React js || Javascript || Tailwind || Express .js || Node js || TypeScript ||Mongo db|| Redux || RestfulAPI || Contact- ankitroy5575@gmail.com",
       photo: viraPic, // Replace with viraPic if imported
