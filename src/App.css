@@ -331,6 +331,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center;
   background-color: rgb(12, 9, 80);
+  border-radius: 12px; /* Slightly larger radius for smoothness */
+  padding: 12px 24px; /* Comfortable spacing inside the button */
+  border: none; /* Removes default border */
+  cursor: pointer; /* Hand cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+.banner button:hover {
+  background-color: rgb(18, 14, 120); /* Slightly lighter shade on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 .banner button svg {
   font-size: 25px;
@@ -574,6 +586,63 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
+  @media (max-width: 768px) {
+    .project {
+      padding: 30px 0; /* Further reduced padding */
+    }
+  
+    .project h2 {
+      font-size: 28px; /* Even smaller for very small screens */
+    }
+  
+    .project p {
+      font-size: 14px;
+      width: 90%;
+      margin: 8px auto 16px auto;
+    }
+  
+    .project .nav.nav-pills {
+      width: 90%; /* Slightly less than full width for padding */
+      display: flex; /* Ensure proper stacking */
+      flex-wrap: wrap; /* Allow items to wrap if needed */
+    }
+  
+    .project .nav.nav-pills .nav-item {
+      width: 100%; /* Stack items vertically on very small screens */
+      margin-bottom: 8px; /* Space between stacked items */
+    }
+  
+    .project .nav.nav-pills .nav-link {
+      font-size: 13px;
+      padding: 10px 0;
+      border-radius: 10px; /* Rounded corners for stacked items */
+    }
+  
+    .nav-link#projects-tabs-tab-first,
+    .nav-link#projects-tabs-tab-second,
+    .nav-link#projects-tabs-tab-third {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 10px; /* Consistent rounding for stacked layout */
+    }
+  
+    .proj-imgbx {
+      border-radius: 15px;
+      margin-bottom: 12px;
+    }
+  
+    .proj-txtx h4 {
+      font-size: 20px;
+    }
+  
+    .proj-txtx span {
+      font-size: 12px;
+    }
+  
+    .background-image-right {
+      width: 60%; /* Adjusted for visibility */
+      opacity: 0.5; /* Slightly faded to avoid clutter */
+    }
+  }
 
 /************ Projects Css ************/
 .contact {
@@ -758,7 +827,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Card Styling */
 .facility .card {
-  background-color: rgb(58, 125, 68); /* Darker card background */
+  background-color:  rgb(12, 9, 80); /* Darker card background */
   border: none;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow */
@@ -1193,6 +1262,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   justify-content: center;
   background-color: rgb(12, 9, 80);
+  border-radius: 10px;
 }
 .rowDiv{
   margin-top: 100px;
