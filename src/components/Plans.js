@@ -18,7 +18,7 @@ const plans = [
       { text: "Lifetime 24/7 Free Hosting Support", hasFeature: true },
       { text: "Unlimited Images & Videos Upload", hasFeature: true },
       { text: "Free SSL Certificates", hasFeature: true },
-      { text: "10 Free Email IDs", hasFeature: false }, // Basic has 5, but we'll mark as not included for 10
+      { text: "10 Free Email IDs", hasFeature: false },
       { text: "SEO Friendly Website", hasFeature: true },
       { text: "100% Responsive Website", hasFeature: true },
       { text: "Live Chat Integration", hasFeature: true },
@@ -29,9 +29,9 @@ const plans = [
       { text: "Inquiry Form", hasFeature: true },
       { text: "WooCommerce Features", hasFeature: false },
       { text: "1 Year 24/7 Free Support For Website", hasFeature: true },
-      { text: "Annual Renewal: ₹4000", hasFeature: false }, // Basic has ₹3000
+      { text: "Annual Renewal: ₹4000", hasFeature: false },
     ],
-    buttonText: "Choose Plan",
+    buttonText: "Choose Plan", // Kept for reference, not used
   },
   {
     title: "Standard Plan",
@@ -60,9 +60,9 @@ const plans = [
       { text: "Inquiry Form", hasFeature: true },
       { text: "WooCommerce Features", hasFeature: true },
       { text: "1 Year 24/7 Free Support For Website", hasFeature: true },
-      { text: "Annual Renewal: ₹4000", hasFeature: false }, // Standard has ₹3000
+      { text: "Annual Renewal: ₹4000", hasFeature: false },
     ],
-    buttonText: "Choose Plan",
+    buttonText: "Choose Plan", // Kept for reference, not used
   },
   {
     title: "Premium Plan",
@@ -92,7 +92,7 @@ const plans = [
       { text: "1 Year 24/7 Free Support For Website", hasFeature: true },
       { text: "Annual Renewal: ₹4000", hasFeature: true },
     ],
-    buttonText: "Contact Us",
+    buttonText: "Contact Us", // Kept for reference, not used
   },
 ];
 
@@ -151,8 +151,8 @@ export const Plans = () => {
                           </li>
                         ))}
                       </ul>
-                      <Button  className="plans-button">
-                        {plan.buttonText}
+                      <Button className="plans-button" href="tel:+918750443995">
+                        Call Now
                       </Button>
                     </Card.Body>
                   </Card>

@@ -6,7 +6,7 @@ import viraPic from "../assets/virapic.jpg";
 
 // import viraPic from '../assets/virapic.jpg'; // Uncomment and adjust path if using local image
 
-export const Staff = () => {
+export const Founder = () => {
   const founders = [
     {
       name: "Abhishek Sharma",
@@ -35,7 +35,7 @@ export const Staff = () => {
   ];
 
   return (
-    <section className="staff-section py-5">
+    <section id="founder" className="staff-section py-5">
       <Container>
         <h2 className="text-center mb-5">Our Founders</h2>
         <Row className="justify-content-center">
