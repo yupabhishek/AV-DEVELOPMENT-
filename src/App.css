@@ -464,14 +464,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background-color: rgb(251, 228, 214); */
   background-color: white;
 }
-.project h2 {
+.project h1 {
 	font-size: 45px;
 	font-weight: 700;
   text-align: center;
   color: rgb(12, 9, 80);
 }
 .project p {
-  color: black;
+  color: rgb(22, 17, 121);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -931,7 +931,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /* Heading Section */
-.plans h2 {
+.plans h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 15px;
@@ -939,10 +939,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .plans .lead {
-  font-size: 1.2rem;
-  color: black; /* Muted gray for subtext */
-  max-width: 800px;
-  margin: 0 auto;
+  color: rgb(22, 17, 121);
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
 }
 
 /* Card Styling */

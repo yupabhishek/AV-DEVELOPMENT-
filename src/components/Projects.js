@@ -9,86 +9,151 @@ import projImg6 from "../assets/img/project-img6.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { Helmet } from "react-helmet";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "Clothes Business",
-      description: "E-commerce Website Development",
+      title: "Clothes Business E-commerce",
+      description: "Full-stack e-commerce website with MERN stack",
       imgUrl: projImg1,
-      link: "https://mernstack-frontend-k6id.vercel.app/"
-    }, 
+      link: "https://mernstack-frontend-k6id.vercel.app/",
+      keywords: ["ecommerce development", "MERN stack", "online clothing store"]
+    },
     {
       title: "Makeup Artist Portfolio",
-      description: "Design & Development",
+      description: "Professional portfolio website for makeup artists",
       imgUrl: projImg2,
-      link: "https://reliable-tarsier-4efeae.netlify.app/"
+      link: "https://reliable-tarsier-4efeae.netlify.app/",
+      keywords: ["portfolio website", "beauty professional", "artist showcase"]
     },
     {
       title: "Ankit Portfolio",
-      description: "MERN Stack Website Development",
+      description: "MERN Stack developer portfolio with projects showcase",
       imgUrl: projImg3,
-      link: "https://programmerankit.netlify.app/"
+      link: "https://programmerankit.netlify.app/",
+      keywords: ["developer portfolio", "MERN stack", "web developer"]
     },
     {
       title: "Abhishek Portfolio",
-      description: "MERN Stack Website Development",
+      description: "Modern portfolio for software engineer",
       imgUrl: projImg4,
-      link: "https://pitpiat.vercel.app/"
+      link: "https://pitpiat.vercel.app/",
+      keywords: ["tech portfolio", "software engineer", "developer website"]
     },
     {
       title: "Discord Bot Site",
-      description: "Simple Web Development",
+      description: "Landing page for Discord bot services",
       imgUrl: projImg5,
-      link: "https://pitpiat.netlify.app/bots/pituiya"
+      link: "https://pitpiat.netlify.app/bots/pituiya",
+      keywords: ["Discord bot", "chat automation", "bot development"]
     },
     {
       title: "A Coder Portfolio",
-      description: "Design & Development",
+      description: "Minimalist portfolio for coding professionals",
       imgUrl: projImg6,
-      link: "https://pitpiat.netlify.app/"
+      link: "https://pitpiat.netlify.app/",
+      keywords: ["coder portfolio", "minimalist design", "developer website"]
     },
   ];
 
+  // Schema.org markup for Project Portfolio
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "AV Development Portfolio Projects",
+    "description": "Showcase of web development projects including e-commerce sites, portfolios, and Discord bots",
+    "url": "https://avdevelopment.in/projects",
+    "numberOfItems": projects.length,
+    "itemListElement": projects.map((project, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": project.title,
+        "description": project.description,
+        "url": project.link,
+        "keywords": project.keywords.join(", ")
+      }
+    }))
+  };
+
   return (
     <section className="project" id="projects">
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>Web Development Projects Portfolio | AV Development</title>
+        <meta 
+          name="description" 
+          content="Explore our portfolio of professional web development projects including e-commerce sites, portfolios, and custom web applications." 
+        />
+        <meta property="og:title" content="Web Development Projects Portfolio | AV Development" />
+        <meta property="og:description" content="Professional web development projects showcase from AV Development" />
+        <meta property="og:url" content="https://avdevelopment.in/projects" />
+        <meta property="og:type" content="website" />
+        <meta name="keywords" content="web development projects, portfolio showcase, e-commerce development, MERN stack projects" />
+        <script type="application/ld+json">{JSON.stringify(projectSchema)}</script>
+      </Helmet>
+
       <Container>
         <Row>
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2>Projects</h2>
-                  <p>
-                    This section showcases diverse projects under AV DEVELOPMENT, featuring portfolio websites, cultural platforms, and tech-driven experiences. 
-                    With a sleek dark theme, interactive tabs filter content, while project thumbnails highlight unique designs. Social media icons and a 
-                    "Let’s Connect" button encourage networking, making it an engaging portfolio display for developers and designers.
+                  <h1>Our Web Development Projects</h1>
+                  <p className="lead">
+                    AV Development specializes in creating <strong>high-performance websites</strong> including 
+                    e-commerce platforms, professional portfolios, and custom web applications. 
+                    Browse our <strong>MERN stack projects</strong> below to see our expertise in action.
                   </p>
+                  
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        <Nav.Link eventKey="first" aria-label="Show all projects">All Projects</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="second" aria-label="Show e-commerce projects">E-commerce</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third" aria-label="Show portfolio projects">Portfolios</Nav.Link>
                       </Nav.Item>
                     </Nav>
+                    
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => (
-                            <ProjectCard key={index} {...project} />
+                            <ProjectCard 
+                              key={index} 
+                              {...project}
+                              altText={`Screenshot of ${project.title} project`}
+                            />
                           ))}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <p>More projects coming soon...</p>
+                        <Row>
+                          {projects.filter(p => p.keywords.includes("ecommerce")).map((project, index) => (
+                            <ProjectCard 
+                              key={index} 
+                              {...project}
+                              altText={`E-commerce project: ${project.title}`}
+                            />
+                          ))}
+                        </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>Stay tuned for future updates.</p>
+                        <Row>
+                          {projects.filter(p => p.keywords.includes("portfolio")).map((project, index) => (
+                            <ProjectCard 
+                              key={index} 
+                              {...project}
+                              altText={`Portfolio project: ${project.title}`}
+                            />
+                          ))}
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
@@ -98,7 +163,12 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Background Design" />
+      <img 
+        className="background-image-right" 
+        src={colorSharp2} 
+        alt="Decorative background element" 
+        aria-hidden="true" 
+      />
     </section>
   );
 };

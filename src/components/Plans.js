@@ -1,6 +1,7 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { Helmet } from "react-helmet";
 
 const plans = [
   {
@@ -31,7 +32,6 @@ const plans = [
       { text: "1 Year 24/7 Free Support For Website", hasFeature: true },
       { text: "Annual Renewal: ₹4000", hasFeature: false },
     ],
-    buttonText: "Choose Plan", // Kept for reference, not used
   },
   {
     title: "Standard Plan",
@@ -62,7 +62,6 @@ const plans = [
       { text: "1 Year 24/7 Free Support For Website", hasFeature: true },
       { text: "Annual Renewal: ₹4000", hasFeature: false },
     ],
-    buttonText: "Choose Plan", // Kept for reference, not used
   },
   {
     title: "Premium Plan",
@@ -92,22 +91,61 @@ const plans = [
       { text: "1 Year 24/7 Free Support For Website", hasFeature: true },
       { text: "Annual Renewal: ₹4000", hasFeature: true },
     ],
-    buttonText: "Contact Us", // Kept for reference, not used
   },
 ];
 
 export const Plans = () => {
+  // Schema Markup for SEO (Rich Snippets)
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Best Web Development Plans in India | AV Development",
+    "description": "Affordable and SEO-friendly web development plans with free hosting, domain, and 24/7 support. Choose the best plan for your business.",
+    "url": "https://avdevelopment.in/plans",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "5999",
+      "highPrice": "9999",
+      "priceCurrency": "INR",
+      "offerCount": "3",
+      "offers": plans.map((plan) => ({
+        "@type": "Offer",
+        "name": plan.title,
+        "price": plan.price === "Custom Pricing" ? "9999" : plan.price.replace("₹", ""),
+        "priceCurrency": "INR",
+        "url": "https://avdevelopment.in/plans",
+        "description": `Includes: ${plan.features.filter(f => f.hasFeature).map(f => f.text).join(", ")}`,
+        "availability": "https://schema.org/InStock",
+      })),
+    },
+  };
+
   return (
     <section className="plans" id="plans">
+      {/* SEO Meta Tags & Schema Markup */}
+      <Helmet>
+        <title>Best Web Development Plans in India | AV Development</title>
+        <meta 
+          name="description" 
+          content="Affordable and SEO-friendly web development plans with free hosting, domain, and 24/7 support. Choose the best plan for your business." 
+        />
+        <meta property="og:title" content="Best Web Development Plans in India | AV Development" />
+        <meta property="og:description" content="Affordable and SEO-friendly web development plans with free hosting, domain, and 24/7 support." />
+        <meta property="og:url" content="https://avdevelopment.in/plans" />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
+      </Helmet>
+
       <Container>
         <Row className="text-center mb-5">
           <Col>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2>Plans & Pricing</h2>
+                  <h1>Best Web Development Plans in India</h1>
                   <p className="lead">
-                    Choose the perfect plan for your web development and website design needs. We offer flexible pricing to suit businesses of all sizes.
+                    Get a <strong>fully SEO-optimized, responsive website</strong> with free hosting, 
+                    domain, and 24/7 support. Choose the perfect plan for your business growth.
                   </p>
                 </div>
               )}
@@ -135,7 +173,7 @@ export const Plans = () => {
                       <div className="plans-badge">Most Popular</div>
                     )}
                     <Card.Body className="text-center">
-                      <h4 className="plans-title">{plan.title}</h4>
+                      <h2 className="plans-title">{plan.title}</h2>
                       <h3 className="plans-price">{plan.price}</h3>
                       <ul className="plans-features">
                         {plan.features.map((feature, i) => (
@@ -151,7 +189,11 @@ export const Plans = () => {
                           </li>
                         ))}
                       </ul>
-                      <Button className="plans-button" href="tel:+918750443995">
+                      <Button 
+                        className="plans-button" 
+                        href="tel:+918750443995"
+                        aria-label={`Call to order ${plan.title}`}
+                      >
                         Call Now
                       </Button>
                     </Card.Body>
