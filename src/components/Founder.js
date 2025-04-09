@@ -12,7 +12,7 @@ export const Founder = () => {
       name: "Abhishek Sharma",
       position: "Founder & CEO",
       description: "I'a MERM stack developer specializes in building web applications using: MongoDB (Database)  NoSQL database for data storage. Express.js (Backend)  Web framework for handling server logic. React (Frontend)  JavaScript library for building user interfaces. Meteor.js (Full-stack framework)  Provides real-time updates and seamless client-server integration.",
-      photo: "https://scontent.fdel77-1.fna.fbcdn.net/v/t39.30808-6/474056852_1160830588735322_3124388545990159160_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=CxMOtbwCXC8Q7kNvgGAm0cV&_nc_oc=AdnwgHubJ5bGTrG0YENM5Y_HYNx3ROvWERAmJody18wcjyC6D4tgb5N6HuuUslYd-Kw&_nc_zt=23&_nc_ht=scontent.fdel77-1.fna&_nc_gid=hdq68r84P525NC5SKN7byQ&oh=00_AYEKzkRXsqBNFWafcobELTVhlCvb6PGz2HmyEYDhhytVYg&oe=67EF68B3",
+      photo: "https://i.postimg.cc/dt34JYZF/20250410-021944.jpg",
       social: {
         github: "https://github.com/yupabhishek",
         instagram: "https://instagram.com/yup.abhishek",
