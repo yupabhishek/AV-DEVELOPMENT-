@@ -80,14 +80,14 @@ export const Footer = () => {
  
   <Col xs={12} md={6} className="text-center text-md-end mt-3 mt-md-0">
     <div className="social-icons">
-      <a href="https://www.linkedin.com/company/av-development-here/" className="mx-2">
+      <a href="https://www.linkedin.com/company/avdevelopment-in/" className="mx-2">
   
         <img src={navIcon1} alt="LinkedIn" className="social-icon" />
       </a>
-      <a href="https://www.facebook.com/avdevelopmenthere" className="mx-2">
+      <a href="https://www.facebook.com/avdevelopment.in" className="mx-2">
         <img src={navIcon2} alt="Facebook" className="social-icon" />
       </a>
-      <a href="https://www.instagram.com/avdevelopmenthere/" className="mx-2">
+      <a href="https://www.instagram.com/avdevelopment.in/" className="mx-2">
         <img src={navIcon3} alt="Instagram" className="social-icon" />
       </a>
     </div>
