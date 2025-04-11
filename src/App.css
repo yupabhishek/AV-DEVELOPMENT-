@@ -798,13 +798,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-
-/************ facility Css ************/
-
+/************ Facility CSS ************/
 .facility {
   padding: 60px 0;
-  background-color: #fff; /* Pure black background */
-  color: rgb(22, 17, 121); /* Off-white for text readability */
+  background-color: #fff;
+  color: rgb(22, 17, 121);
 }
 
 /* Heading Section */
@@ -812,7 +810,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: rgb(22, 17, 121); /* Pure white for emphasis */
+  color: rgb(22, 17, 121);
+  text-align: center;
 }
 
 .facility .lead {
@@ -827,59 +826,65 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Card Styling */
 .facility .card {
-  background-color:  rgb(12, 9, 80); /* Darker card background */
+  background-color: rgb(12, 9, 80);
   border: none;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 250px; /* Fixed minimum height for consistency */
-  display: flex; /* Use flexbox to control content layout */
-  flex-direction: column; /* Stack content vertically */
-  justify-content: space-between; /* Distribute space evenly */
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Hover Effect */
 .facility .card:hover {
-  transform: translateY(-8px); /* Subtle lift on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Card Body */
 .facility .card-body {
   padding: 25px;
   text-align: center;
-  flex-grow: 1; /* Allow the body to grow and fill the card */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
+  justify-content: center;
 }
 
 /* Icon Styling */
 .facility-icon {
-  font-size: 2.5rem; /* Larger icons */
-  color: #4dabf7; /* Soft blue accent for icons */
-  display: block; /* Ensure the icon is displayed as a block element */
-  margin-bottom: 15px; /* Consistent spacing below the icon */
+  font-size: 2.5rem;
+  color: #4dabf7;
+  display: block;
+  margin-bottom: 15px;
 }
 
 /* Card Title */
 .facility .card-title {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #ffffff; /* White titles */
+  color: #ffffff;
   margin-bottom: 10px;
-  min-height: 48px; /* Reserve space for 2 lines of text */
+  min-height: 48px;
 }
 
 /* Card Text */
 .facility .card-text {
   font-size: 1rem;
-  color: #B8B8B8; /* Updated to #B8B8B8 as requested */
-  flex-grow: 1; /* Allow the text to grow and fill remaining space */
-  min-height: 60px; /* Reserve space for 3 lines of text to ensure consistent wrapping */
+  color: #B8B8B8;
+  flex-grow: 1;
+  min-height: 60px;
 }
 
-/* Responsive Design */
+/************ Mobile Responsiveness ************/
+@media (max-width: 991px) {
+  .facility .lead {
+    width: 70%;
+  }
+}
+
 @media (max-width: 767px) {
   .facility {
     padding: 40px 0;
@@ -887,14 +892,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .facility h2 {
     font-size: 2rem;
+    margin-bottom: 12px;
   }
 
   .facility .lead {
     font-size: 1rem;
+    width: 90%;
+    margin: 12px auto 25px;
+    line-height: 1.6;
   }
 
   .facility .card {
-    min-height: 220px; /* Slightly smaller height for mobile */
+    min-height: 220px;
+    margin-bottom: 20px;
   }
 
   .facility .card-body {
@@ -903,26 +913,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .facility .card-title {
     font-size: 1.2rem;
-    min-height: 40px; /* Adjust for smaller font size */
+    min-height: auto;
   }
 
   .facility .card-text {
-    min-height: 48px; /* Adjust for smaller font size */
-    color: #B8B8B8; /* Ensure the color applies on smaller screens */
+    font-size: 0.95rem;
+    min-height: auto;
+    line-height: 1.5;
   }
 
   .facility-icon {
-    font-size: 2rem; /* Adjusted for smaller screens */
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 575px) {
+  .facility {
+    padding: 35px 0;
+  }
+
+  .facility h2 {
+    font-size: 1.8rem;
+  }
+
   .facility .card {
-    margin-bottom: 25px; /* Extra spacing on smaller screens */
+    min-height: 200px;
+  }
+
+  .facility-icon {
+    font-size: 1.8rem;
   }
 }
 
-
+@media (max-width: 400px) {
+  .facility h2 {
+    font-size: 1.6rem;
+  }
+  
+  .facility .lead {
+    font-size: 0.95rem;
+  }
+  
+  .facility .card {
+    min-height: 180px;
+  }
+  
+  .facility-icon {
+    font-size: 1.6rem;
+  }
+}
 /***Plans & Pricing Section****/
 .plans {
   padding: 60px 0;
