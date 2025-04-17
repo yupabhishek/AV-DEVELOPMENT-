@@ -1,0 +1,124 @@
+/* Founder Component Styles */
+.founders-root {
+    background-color: #ffffff;
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  .founders-heading {
+    font-size: 45px;
+    font-weight: 700;
+    color: rgb(12, 9, 80);
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .founders-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .founder-profile-card {
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: navy;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    width: 500px;
+  }
+  
+  .founder-profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  .founder-image-wrapper {
+    position: relative;
+    height: 400px;
+    width: 500px;
+  }
+  
+  .founder-portrait {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .founder-bio-overlay {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(13, 9, 80, 0.658);
+    color: #ffffff;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    opacity: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .founder-image-wrapper:hover .founder-bio-overlay {
+    top: 0;
+    opacity: 1;
+  }
+  
+  .founder-details {
+    padding: 1.5rem;
+    color: white;
+  }
+  
+  .founder-name {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .founder-role {
+    color: #4a6b9c;
+    margin-bottom: 1rem;
+  }
+  
+  .founder-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .founder-socials a {
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .founder-socials a:hover {
+    color: #4a6b9c;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .founders-heading {
+      font-size: 36px;
+    }
+    
+    .founder-profile-card {
+      width: 100%;
+      max-width: 350px;
+    }
+    
+    .founder-image-wrapper {
+      height: 350px;
+      width: 100%;
+    }
+  }

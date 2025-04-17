@@ -33,7 +33,6 @@ export const Projects = () => {
   return (
     <section className="project" id="projects">
       <Helmet>
-        <title>Web Development Projects Portfolio | AV Development</title>
         <meta name="description" content="Explore our portfolio of professional web development projects including e-commerce sites, portfolios, and custom web applications." />
         <meta property="og:title" content="Web Development Projects Portfolio | AV Development" />
         <meta property="og:description" content="Professional web development projects showcase from AV Development" />

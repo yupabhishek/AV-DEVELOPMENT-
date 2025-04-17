@@ -1,25 +1,68 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "AV Development",
+  "name": "AV Development - Web Design Company Delhi",
+  "description": "Professional website design and development services in Delhi. Custom solutions starting at ₹5,999.",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "logo192.webp",
+      "type": "image/webp",
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "logo512.webp",
+      "type": "image/webp",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "av-logo-monochrome.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "monochrome"
     }
   ],
-  "start_url": ".",
+  "start_url": "/?source=pwa",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0c0950",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["business", "web development", "design"],
+  "screenshots": [
+    {
+      "src": "screenshots/homepage-1.webp",
+      "type": "image/webp",
+      "sizes": "1280x720"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Our Services",
+      "url": "/services",
+      "description": "View our web development services"
+    },
+    {
+      "name": "Contact Us",
+      "url": "/contact",
+      "description": "Get in touch with our team"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://www.avdevelopment.in"
+    }
+  ],
+  "prefer_related_applications": false,
+  "display_override": ["window-controls-overlay"],
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
 }

@@ -1101,7 +1101,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .plans-button {
   /* background-color: #4dabf7; Sof
   t blue button */
-  background-color: wheat;
+  background-color: blue;
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
@@ -1367,86 +1367,3 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 /* app.css */
-
-/* Staff Section Styles */
-.staff-section {
-  background-color: #ffffff; /* White background */
-}
-
-.staff-card {
-  border: none;
-  border-radius: 4px; /* Subtle rounding */
-  overflow: hidden;
-  background-color: navy; /* Navy card background */
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Default shadow like Plans */
-}
-
-.staff-card:hover {
-  transform: translateY(-8px); /* Lift on hover like Plans */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover like Plans */
-}
-
-.image-container {
-  position: relative;
-  height: 400px;
-  width: 300; /* Matches staff-photo height */
-}
-
-.staff-photo {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
-.staff-description {
-  position: absolute;
-  top: -100%; /* Start above the image */
-  left: 0;
-  right: 0;
-  bottom: 0; /* Extend to cover full image */
-  background-color: rgba(13, 9, 80, 0.658); /* Navy at 75% opacity */
-  color: #ffffff; /* White text */
-  padding: 1.5rem;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: all 0.4s ease;
-  opacity: 0;
-  font-family: 'Arial', sans-serif; /* Aesthetic font */
-}
-
-.image-container:hover .staff-description {
-  top: 0; /* Slide down to cover image */
-  opacity: 1;
-}
-
-.card-title {
-  color: navy; /* Navy for names */
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.card-text {
-  color: #4a6b9c; /* Lighter navy for position */
-  margin-bottom: 0.5rem;
-}
-
-.social-links a {
-  color: navy; /* Navy color */
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: navy; /* Lighter navy for hover */
-}
-
-.staff-section h2 {
-    font-size: 45px;
-    font-weight: 700;
-    text-align: center;
-    color: rgb(12, 9, 80);
-}
